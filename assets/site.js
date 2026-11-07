@@ -25,7 +25,7 @@
   }
 })();
 // failsafe: never leave the intro covering the page
-setTimeout(function(){var i=document.querySelector('.intro');if(i)i.style.display='none'},2600);
+setTimeout(function(){var i=document.querySelector('.intro');if(i)i.style.display='none'},5200);
 // preview forms: no backend yet
 document.querySelectorAll('[data-preview-form]').forEach(function(f){
   f.addEventListener('submit',function(e){e.preventDefault();var m=f.querySelector('.form-msg');var req=f.querySelector('[required]');

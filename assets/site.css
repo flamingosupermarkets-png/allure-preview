@@ -200,12 +200,12 @@ footer .legal{border-top:1px solid rgba(255,255,255,.15);margin-top:40px;padding
 .btn.ghost.light:hover{background:#fff;color:var(--ink)}
 
 /* intro: logo reveal, curtain lifts */
-.intro{position:fixed;inset:0;z-index:100;background:var(--plum-deep);display:flex;align-items:center;justify-content:center;animation:curtain .8s cubic-bezier(.7,0,.2,1) 1.25s forwards}
+.intro{position:fixed;inset:0;z-index:100;background:var(--plum-deep);display:flex;align-items:center;justify-content:center;animation:curtain 1.5s cubic-bezier(.65,0,.25,1) 2.7s forwards}
 .intro-mark{text-align:center;color:#F3EADC}
-.intro-mark img{width:min(260px,60vw);height:auto;margin:0 auto;opacity:0;filter:brightness(0) invert(1) sepia(.35) saturate(1.4) blur(8px);transform:scale(.92);animation:logoin 1.4s cubic-bezier(.2,.7,.2,1) .15s forwards}
+.intro-mark img{width:min(260px,60vw);height:auto;margin:0 auto;opacity:0;filter:brightness(0) invert(1) sepia(.35) saturate(1.4) blur(8px);transform:scale(.92);animation:logoin 2s cubic-bezier(.2,.7,.2,1) .2s forwards}
 @keyframes logoin{to{opacity:1;filter:brightness(0) invert(1) sepia(.35) saturate(1.4) blur(0);transform:none}}
 .intro-mark small{display:block;margin-top:14px;font-size:.8rem;letter-spacing:.42em;color:var(--glow);opacity:0;animation:fade .6s ease .6s forwards}
-.intro-mark i{display:block;height:1px;background:var(--glow);margin:18px auto 0;width:0;animation:line .7s ease .45s forwards}
+.intro-mark i{display:block;height:1px;background:var(--glow);margin:18px auto 0;width:0;animation:line 1.1s ease 1s forwards}
 @keyframes mark{from{opacity:0;letter-spacing:.6em;filter:blur(6px)}to{opacity:1;letter-spacing:.06em;filter:blur(0)}}
 @keyframes fade{to{opacity:1}}
 @keyframes line{to{width:140px}}
@@ -215,13 +215,13 @@ footer .legal{border-top:1px solid rgba(255,255,255,.15);margin-top:40px;padding
 /* full-bleed hero */
 .cine{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--plum-deep)}
 .cine-bg{position:absolute;inset:0}
-.cine-bg img,.cine-bg video{width:100%;height:100%;object-fit:cover;transform:scale(1.12);animation:kenburns 14s ease-out 1s forwards}
+.cine-bg img,.cine-bg video{width:100%;height:100%;object-fit:cover;transform:scale(1.12);animation:kenburns 16s ease-out 2.7s forwards}
 .cine-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,29,23,.35) 0%,rgba(42,29,23,.25) 40%,rgba(42,29,23,.88) 100%),linear-gradient(90deg,rgba(42,29,23,.6),rgba(42,29,23,0) 70%)}
 @keyframes kenburns{to{transform:scale(1)}}
 .cine-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:48px;align-items:end;padding-block:120px 72px}
 .cine h1{color:#fff;font-size:clamp(2.8rem,7vw,5.8rem);max-width:13ch;margin-bottom:.2em}
-.cine h1 span{display:inline-block;opacity:0;transform:translateY(28px);animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards}
-.cine h1 span:nth-child(1){animation-delay:1.45s}.cine h1 span:nth-child(2){animation-delay:1.62s}
+.cine h1 span{display:inline-block;opacity:0;transform:translateY(28px);animation:rise 1.4s cubic-bezier(.2,.7,.2,1) forwards}
+.cine h1 span:nth-child(1){animation-delay:3.4s}.cine h1 span:nth-child(2){animation-delay:3.65s}
 .no-intro .cine h1 span{animation-delay:.1s}.no-intro .cine h1 span:nth-child(2){animation-delay:.3s}.no-intro .cine h1 span:nth-child(3){animation-delay:.5s}
 @keyframes rise{to{opacity:1;transform:none}}
 .cine .lede{color:rgba(255,255,255,.86);max-width:52ch}
@@ -269,11 +269,11 @@ footer .brand{display:inline-block}
 .ticker span{font:400 1.35rem var(--serif);white-space:nowrap;letter-spacing:.02em}
 .ticker i{font-style:normal;color:var(--glow);font-size:.9rem}
 
-.cine-sub{font-size:.95rem;letter-spacing:.24em;color:var(--glow);margin:0 0 18px;opacity:0;animation:fade 1s ease 1.8s forwards}
+.cine-sub{font-size:.95rem;letter-spacing:.24em;color:var(--glow);margin:0 0 18px;opacity:0;animation:fade 1.2s ease 3.9s forwards}
 .no-intro .cine-sub{animation-delay:.7s}
-.cine .lede,.cine .ctas,.cine-stars{opacity:0;animation:fade 1s ease 1.95s forwards}
+.cine .lede,.cine .ctas,.cine-stars{opacity:0;animation:fade 1.2s ease 4.1s forwards}
 .no-intro .cine .lede,.no-intro .cine .ctas,.no-intro .cine-stars{animation-delay:.8s}
-.cine-review{opacity:0;transform:translateY(30px);animation:rise 1.1s cubic-bezier(.2,.7,.2,1) 2.1s forwards}
+.cine-review{opacity:0;transform:translateY(30px);animation:rise 1.3s cubic-bezier(.2,.7,.2,1) 4.3s forwards}
 .no-intro .cine-review{animation-delay:1s}
 
 /* count-up stats */
