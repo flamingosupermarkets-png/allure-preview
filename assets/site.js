@@ -54,3 +54,16 @@ document.querySelectorAll('[data-preview-form]').forEach(function(f){
   next.addEventListener('click',function(){if(!ok()){var l=qs[i].querySelector('input');if(l)l.focus();return}if(i<qs.length-1){i++;show()}else result()});
   back.addEventListener('click',function(){if(i>0){i--;show()}});
 })();
+// spa music: royalty-free tracks (Mixkit free license), only plays after the visitor taps
+(function(){var b=document.querySelector('.music');if(!b)return;
+  var list=b.dataset.tracks.split(' '),i=0,a=new Audio();a.preload='none';a.volume=0;
+  var lbl=b.querySelector('.lbl');
+  function src(){a.src=list[i%list.length]}
+  a.addEventListener('ended',function(){i++;src();a.play().catch(function(){})});
+  function fade(to,done){var step=function(){var v=a.volume+(to>a.volume?.03:-.05);if((to>a.volume&&v>=to)||(to<=a.volume&&v<=to)){a.volume=Math.max(0,Math.min(1,to));done&&done();return}a.volume=Math.max(0,Math.min(1,v));requestAnimationFrame(step)};step()}
+  function on(){if(!a.src)src();a.play().then(function(){b.setAttribute('aria-pressed','true');lbl.textContent='Music on';fade(.35);try{sessionStorage.setItem('allureMusic','1')}catch(e){}}).catch(function(){})}
+  function off(){fade(0,function(){a.pause()});b.setAttribute('aria-pressed','false');lbl.textContent='Spa music';try{sessionStorage.setItem('allureMusic','0')}catch(e){}}
+  b.addEventListener('click',function(){b.getAttribute('aria-pressed')==='true'?off():on()});
+  // keep music going page to page if they turned it on (browser may require another tap)
+  try{if(sessionStorage.getItem('allureMusic')==='1'){on();var once=function(){if(b.getAttribute('aria-pressed')!=='true')on();document.removeEventListener('pointerdown',once)};document.addEventListener('pointerdown',once)}}catch(e){}
+})();
