@@ -1,3 +1,6 @@
-# PREVIEW — blocks search engines until launch
+# PREVIEW: blocks search engines until launch. At launch replace with:
+# User-agent: *
+# Allow: /
+# Sitemap: https://www.allurewellnessesthetics.com/sitemap.xml
 User-agent: *
 Disallow: /
