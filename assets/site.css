@@ -478,3 +478,5 @@ html.big-text .cine-bg::after{background:rgba(42,29,23,.82)}
 
 .iv-rail{scroll-padding-inline:20px}
 @media (max-width:1220px){.iv-rail{padding-left:20px;padding-right:20px}}
+
+.story-img img{border-radius:28px;aspect-ratio:636/903;object-fit:cover;object-position:center top}
