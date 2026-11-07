@@ -490,3 +490,11 @@ html.big-text .cine-bg::after{background:rgba(42,29,23,.82)}
 @keyframes eq{0%,100%{height:4px}50%{height:14px}}
 @media (max-width:720px){.music{bottom:calc(84px + env(safe-area-inset-bottom,0px));padding:0 14px 0 12px}.music .lbl{font-size:.82rem}}
 @media (prefers-reduced-motion:reduce){.music[aria-pressed="true"] .eq i{animation:none;height:10px}}
+
+/* image-less treatment card / portrait (until real photos arrive) */
+.svc-card.noimg{background:radial-gradient(120% 90% at 20% 10%,#7A5A45 0%,#4A3428 45%,#2A1D17 100%)}
+.svc-card.noimg::before{content:"";position:absolute;inset:18px;border:1px solid rgba(201,164,106,.45);border-radius:14px}
+.portrait.noimg{display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 90% at 30% 15%,#7A5A45 0%,#4A3428 50%,#2A1D17 100%)}
+.portrait.noimg span{font:500 3rem var(--serif);color:rgba(243,234,220,.85);letter-spacing:.06em}
+.team{grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px}
+@media (max-width:860px){.team{grid-template-columns:1fr}}
